@@ -22,24 +22,24 @@ void Start(){
         currentTime+=Time.deltaTime;
         // myTransform = this.transform;
         // myPos= this.transform.position;
-        if (Input.GetKey(KeyCode.W)) {//矢印上が押されている時に実行される
+        if (Input.GetKey(KeyCode.W)) {//wが押されている時に実行される
             if (this.transform.position.y < 5)  {
                 transform.position += new Vector3(0, statusdata.SPEED * Time.deltaTime, 0);//☑
             }
         }
-        if (Input.GetKey(KeyCode.S)){//矢印下が押されている時に実行される
+        if (Input.GetKey(KeyCode.S)){//sが押されている時に実行される
             if (this.transform.position.y > -5) { 
                 transform.position += new Vector3(0, -1* statusdata.SPEED * Time.deltaTime, 0);//☑
             }
         }
-        if (Input.GetKey(KeyCode.A)) {//矢印左が押されている時に実行される
+        if (Input.GetKey(KeyCode.A)) {//aが押されている時に実行される
             if (this.transform.position.x > -3) { 
                 worldAngle.y = 0f;//通常の向き
                 this.transform.localEulerAngles = worldAngle;//自分の角度に代入する
                 transform.position += new Vector3(-1 * statusdata.SPEED * Time.deltaTime, 0, 0);//☑
             }
         }
-        if (Input.GetKey(KeyCode.D)) {//矢印右が押されている時に実行される
+        if (Input.GetKey(KeyCode.D)) {//dが押されている時に実行される
             if (this.transform.position.x < 3) { 
                 worldAngle.y = -180f;//右向きの角度
                 this.transform.localEulerAngles = worldAngle;//自分の角度に代入
